@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "03075.Proyecto#1.SusanMurillo\\03075.Proyecto#1.SusanMurillo.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Proyecto#2.SusanMurillo\\Proyecto#2.SusanMurillo.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
