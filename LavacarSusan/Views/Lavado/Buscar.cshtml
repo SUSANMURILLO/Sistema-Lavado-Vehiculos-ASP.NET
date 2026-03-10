@@ -1,0 +1,36 @@
+﻿@model _03075.Proyecto_1.SusanMurillo.Models.Lavado
+
+@{
+    ViewData["Title"] = "Buscar";
+}
+
+<h1>Buscar</h1>
+
+<h4>Lavado</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Buscar">
+            <form asp-action="Buscar">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label>IdLavado:</label>
+                    @Html.TextBoxFor(model => model.IdLavado, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Buscar" class="btn btn-primary" />
+                </div>
+            </form>
+            
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

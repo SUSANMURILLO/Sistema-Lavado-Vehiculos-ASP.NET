@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+ 
+<div class="text-center">
+   
+    <h1 class="display-1">Bienvenidos </h1>
+    <img src="imagenes\carro.png" alt="Se lo chaneo a domicilio" width="400" height="300" />
+    <h2 class="display-4">Lavado de Carros</h2>
+
+
+    <a asp-controller="Empleados" asp-action="Index" class="btn btn-primary">
+        Ver lista de Empleados
+    </a>
+    <a asp-controller="RegistroVehiculos" asp-action="Index" class="btn btn-primary">
+      Registro de vehiculos
+    </a>
+    <a asp-controller="Cliente" asp-action="Index" class="btn btn-primary">
+        Clientes
+    </a>
+    <a asp-controller="Lavado" asp-action="Index" class="btn btn-primary">
+        Registro de Lavados
+    </a>
+</div>

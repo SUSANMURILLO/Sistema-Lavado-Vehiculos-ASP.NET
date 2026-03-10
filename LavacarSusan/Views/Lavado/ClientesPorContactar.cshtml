@@ -1,0 +1,35 @@
+﻿@model List<_03075.Proyecto_1.SusanMurillo.Models.ClienteReporteDTO>
+
+@{
+    ViewData["Title"] = "ClientesPorContactar";
+}
+
+<h1>Clientes por Contactar</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model[0].ClienteId)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Nombre)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Telefono)</th>
+            <th>@Html.DisplayNameFor(model => model[0].PlacaVehiculo)</th>
+            <th>@Html.DisplayNameFor(model => model[0].UltimaFechaDeAtencion)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.ClienteId</td>
+                <td>@cliente.Nombre</td>
+                <td>@cliente.Telefono</td>
+                <td>@cliente.PlacaVehiculo</td>
+                <td>@cliente.UltimaFechaDeAtencion.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+  
+    <a asp-action="Index">Back to List</a>
+</div>

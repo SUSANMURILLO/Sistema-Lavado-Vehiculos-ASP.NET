@@ -1,0 +1,69 @@
+﻿@model _03075.Proyecto_1.SusanMurillo.Models.Empleados
+
+@{
+    ViewData["Title"] = "ResultadoVista";
+}
+
+<h1>ResultadoVista</h1>
+
+<h4>Empleados</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ResultadoVista">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cedula)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cedula)
+        </dd>
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FechaIngreso)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechaIngreso)
+        </dd>
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SalarioXDia)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SalarioXDia)
+        </dd>
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.VacacionesAcumuladas)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.VacacionesAcumuladas)
+        </dd>
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FechadeRetiro)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechadeRetiro)
+        </dd>
+        <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MontoLiquidacion)
+        </dt>
+        <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MontoLiquidacion)
+        </dd>
+            
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<_03075.Proyecto_1.SusanMurillo.Models.Empleados>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Empleados</h1>
+
+<p>
+        
+    <a asp-action="Create" class="btn btn-primary">
+        Crear empleado
+    </a>
+    <a asp-action="Buscar" class="btn btn-primary">
+        Buscar empleado
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaIngreso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalarioXDia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VacacionesAcumuladas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechadeRetiro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MontoLiquidacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaIngreso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalarioXDia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacacionesAcumuladas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechadeRetiro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MontoLiquidacion)
+            </td>
+            
+                <td>
+                    <a asp-action="Edit" asp-route-cedula="@item.Cedula">Edit</a> |
+
+                   
+
+                    <a asp-action="Delete" asp-route-cedula="@item.Cedula">Delete</a>
+                </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
